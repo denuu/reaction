@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
 class NavButton extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <button className="nav-button" onClick={this.props.url}>
@@ -12,3 +9,5 @@ class NavButton extends Component {
         )
     }
 }
+
+export default NavButton;
