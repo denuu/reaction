@@ -1,0 +1,31 @@
+.navbar {
+  background: #282c34;
+  height: 50vh;
+
+  .header {
+    height: 50%;
+
+    .breadcrumb {
+      padding-top: 2em;
+      height: calc(100% - 4em);
+      position: relative;
+      vertical-align: middle;
+    }
+  }
+
+  .nav {
+    height: 50%;
+    margin: 0;
+    padding-left: 0;
+
+    li {
+      list-style: none;
+      margin-left: 0;
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+}

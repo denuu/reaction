@@ -1,36 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Switch, Route, Link } from 'react-router-dom';
-import About from './components/About/About';
-
-const Home = () => (
-    <div>
-        <h2>Home</h2>
-    </div>
-)
-
-// const About = () => (
-//     <div>
-//         <h2>About</h2>
-//     </div>
-// )
-
-const Code = () => (
-    <div>
-        <h2>Code</h2>
-    </div>
-)
-
-const Photo = () => (
-    <div>
-        <h2>Photo</h2>
-    </div>
-)
-
-const Design = () => (
-    <div>
-        <h2>Design</h2>
-    </div>
-)
+import Home from '../../components/Home/index';
+import About from '../../components/About/index';
+import Code from '../../components/Code/index';
+import Photo from '../../components/Photo/index';
+import Design from '../../components/Design/index';
+import '../../styles/components/navbar.scss';
+import logo from '../../logo.svg';
 
 class Navbar extends Component {
     /*constructor(props) {
@@ -56,6 +32,9 @@ class Navbar extends Component {
         return (
             <div>
                 <nav className="navbar">
+                    <div className="header">
+                        <img src={logo} className="breadcrumb" alt="logo" />
+                    </div>
                     <ul className="nav">
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/about">About</Link></li>
@@ -64,7 +43,7 @@ class Navbar extends Component {
                         <li><Link to="/design">Design</Link></li>
                     </ul>
                 </nav>
-                <Route exact title="About" path="/" component={Home} />
+                <Route exact title="Home" path="/" component={Home} />
                 <Route exact title="About" path="/about" component={About} />
                 <Route exact title="Code" path="/code" component={Code} />
                 <Route exact title="Photo" path="/photo" component={Photo} />
